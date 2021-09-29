@@ -26,10 +26,6 @@ public class UserLogin {
     @ApiModelProperty(notes = "Login password")
     private String password;
 
-    @Column(length = 50)
-    @ApiModelProperty(notes = "Salt for password generated")
-    private String salt;
-
     @Column(name = "access_token", columnDefinition = "TEXT")
     @ApiModelProperty(notes = "JWT access token generated")
     private String accessToken;
@@ -56,14 +52,6 @@ public class UserLogin {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getSalt() {
-        return salt;
-    }
-
-    public void setSalt(String salt) {
-        this.salt = salt;
     }
 
     public String getAccessToken() {

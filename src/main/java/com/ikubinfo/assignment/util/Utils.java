@@ -2,6 +2,7 @@ package com.ikubinfo.assignment.util;
 
 import com.google.gson.JsonObject;
 
+import java.util.Base64;
 import java.util.List;
 
 /**
@@ -21,5 +22,15 @@ public class Utils {
         JsonObject responseObj = new JsonObject();
         responseObj.addProperty(Constant.MESSAGE, message);
         return responseObj.toString();
+    }
+
+    public static String getTokenSecretKey(String key){
+        byte[] valueDecoded = Base64.getDecoder().decode(key.getBytes());
+        return new String(valueDecoded);
+    }
+
+    public static String getFinalToken(String header) {
+        String[] tokenPart = header.split("[\\$\\(\\)]");
+        return tokenPart[2];
     }
 }
