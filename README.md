@@ -23,6 +23,7 @@ Then, change the `application.properties` file :
 ```
 spring.datasource.username=your_db_user_name
 spring.datasource.password=your_db_user_password
+
 logging.file = /your_desired_file_location/assignment.log
 ```
 
