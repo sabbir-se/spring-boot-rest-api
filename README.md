@@ -111,7 +111,7 @@ Response:
 ]
 ```
 
-## To view Swagger 2 API docs
+## For Testing API To view Swagger 2 API docs
 
 Run the server and browse to [http://localhost:8070/swagger-ui.html](http://localhost:8090/swagger-ui.html)
 
